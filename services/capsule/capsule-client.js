@@ -12,7 +12,7 @@ const listAllOpportunities = async () => {
   return responseData.data;
 };
 
-const updateOpportunityDetails = async (id, opportunityName, date) => {
+const updateOpportunityDetails = async (id, opportunityName) => {
   const params = { opportunity: {
     name: opportunityName,
   },
