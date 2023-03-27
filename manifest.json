@@ -26,8 +26,8 @@
         ],
         "slash_commands": [
             {
-                "command": "/sample-command",
-                "description": "Runs a sample command",
+                "command": "/capsule-list-optys",
+                "description": "Lists all Opportunities Assigned to you",
                 "should_escape": false
             }
         ]
@@ -35,9 +35,15 @@
     "oauth_config": {
         "scopes": {
             "bot": [
-                "channels:history",
+                "app_mentions:read",
                 "chat:write",
-                "commands"
+                "chat:write.public",
+                "im:history",
+                "im:read",
+                "im:write",
+                "links:write",
+                "commands",
+                "channels:history"
             ]
         }
     },

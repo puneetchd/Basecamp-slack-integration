@@ -1,6 +1,6 @@
 const { App, LogLevel } = require('@slack/bolt');
 const { config } = require('dotenv');
-const { registerListeners } = require('./listeners');
+const { registerListeners } = require('./services/slack/listeners');
 
 config();
 
