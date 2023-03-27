@@ -50,31 +50,12 @@ npm run lint
 
 `app.js` is the entry point for the application and is the file you'll run to start the server. This project aims to keep this file as thin as possible, primarily using it as a way to route inbound requests.
 
-### `/listeners`
+### `/slack/listeners`
 
 Every incoming request is routed to a "listener". Inside this directory, we group each listener based on the Slack Platform feature used, so `/listeners/shortcuts` handles incoming [Shortcuts](https://api.slack.com/interactivity/shortcuts) requests, `/listeners/views` handles [View submissions](https://api.slack.com/reference/interaction-payloads/views#view_submission) and so on.
 
+### `/services`
 
-## App Distribution / OAuth
+`capsule-client.js` contains the business logic to interact with Capsule CRM API's for CRUD operations. 
 
-Only implement OAuth if you plan to distribute your application across multiple workspaces. A separate `app-oauth.js` file can be found with relevant OAuth settings.
-
-When using OAuth, Slack requires a public URL where it can send requests. In this template app, we've used [`ngrok`](https://ngrok.com/download). Checkout [this guide](https://ngrok.com/docs#getting-started-expose) for setting it up.
-
-Start `ngrok` to access the app on an external network and create a redirect URL for OAuth. 
-
-```
-ngrok http 3000
-```
-
-This output should include a forwarding address for `http` and `https` (we'll use `https`). It should look something like the following:
-
-```
-Forwarding   https://3cb89939.ngrok.io -> http://localhost:3000
-```
-
-Navigate to **OAuth & Permissions** in your app configuration and click **Add a Redirect URL**. The redirect URL should be set to your `ngrok` forwarding address with the `slack/oauth_redirect` path appended. For example:
-
-```
-https://3cb89939.ngrok.io/slack/oauth_redirect
-```
+This Slack App also integrates with incoming webhooks to inform channel about changes done to opportunities, stage changes etc. To achive this a simple cloud functions is triggered locally or via Google Cloud functions. 
