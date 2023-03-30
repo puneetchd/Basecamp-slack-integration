@@ -1,5 +1,6 @@
 const { Blocks, Elements, Modal } = require('slack-block-builder');
 
+// Block Kit Modal view to Update Opportunity Details
 const updateOpportunity = ({ oppId, opportunityName, opportunityDate }) => {
   const textArea = (name) => Elements.TextInput({
     actionId: 'name',

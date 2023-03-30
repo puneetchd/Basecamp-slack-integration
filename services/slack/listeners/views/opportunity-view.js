@@ -1,5 +1,6 @@
 const { Message, Blocks, Elements } = require('slack-block-builder');
 
+// Block Kit view to display Opportunity Details
 const opportunityView = (channel, opportunityDetails) => {
   const { id,
     name,

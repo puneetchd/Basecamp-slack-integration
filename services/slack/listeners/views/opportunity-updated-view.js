@@ -1,5 +1,6 @@
 const { updateOpportunityDetails } = require('../../../capsule/capsule-client');
 
+// Update CRM Opportuniry Details
 const opportunityUpdatedCallback = async ({ ack, view, client, body }) => {
   try {
     await ack();

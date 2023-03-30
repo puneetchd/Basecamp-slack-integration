@@ -1,5 +1,6 @@
 const updateOpportunity = require('../views/update-opportunity-view');
 
+// Update Opportunity Details
 const updateOpportunityCallback = async ({ ack, client, body }) => {
   try {
     await ack();
