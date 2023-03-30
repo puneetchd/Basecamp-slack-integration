@@ -1,6 +1,20 @@
-# Bolt for JavaScript Template App
+# Slack <> Capsule CRM Integration
 
-This is a generic Bolt for JavaScript template app used to build out Slack apps.
+This is a Slack App which integrates with Capsule CRM for productivity and Sales function enhancement. 
+Capsule CRM is a software which helps streamline your organization-wide sales, marketing, customer support, and inventory management functions in a single system.
+
+With Capsule CRM and Slack integration, you can share information from CRM with your team members in Slack so you work with better context.
+
+## Features
+1. List Assigned Opportunities. 
+2. Update Opportunity Details.
+3. Inform channel CRM updates using Webhooks, conditional logics to streamline workflow. 
+
+## Solution Design
+
+The solution uses [Bolt.js framework](https://slack.dev/bolt-js/tutorial/getting-started) connecting with [Capsule CRM API's](https://developer.capsulecrm.com/) for CRUD operations. 
+
+![Screenshot 2023-03-30 at 2 31 17 PM](https://user-images.githubusercontent.com/2357630/228750059-91b167aa-00f0-4ea4-a5b5-14147c08e1a1.png)
 
 Before getting started, make sure you have a development workspace where you have permissions to install apps. If you don’t have one setup, go ahead and [create one](https://slack.com/create).
 ## Installation
