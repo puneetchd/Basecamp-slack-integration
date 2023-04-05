@@ -38,7 +38,3 @@ registerListeners(app);
     console.error('Unable to start App', error);
   }
 })();
-
-app.event('app_home_opened', ({ event, say }) => {
-  say(`Hey <@${event.user}>!, welcome to application.`);
-});
