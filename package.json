@@ -24,15 +24,15 @@
     "url": "https://github.com/slackapi/bolt-js-template/issues"
   },
   "dependencies": {
-    "@slack/bolt": "^3.13.0",
     "axios": "^1.4.0",
+    "@slack/bolt": "^3.13.1",
     "capsule-crm": "^0.0.8",
-    "dotenv": "~16.0.3",
+    "dotenv": "~16.3.1",
     "lodash": "^4.17.21",
     "slack-block-builder": "^2.7.2"
   },
   "devDependencies": {
-    "eslint": "~8.37.0",
+    "eslint": "~8.44.0",
     "eslint-config-airbnb-base": "~15.0.0",
     "eslint-plugin-import": "~2.27.5",
     "nodemon": "^2.0.22"
